@@ -1,16 +1,26 @@
 package com.example;
 
+import ch.qos.logback.core.CoreConstants;
 import com.example.entity.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Map;
 
 @SpringBootApplication
 public class Spring01Application {
-
     public static void main(String[] args) {
+        ConfigurableApplicationContext ioc = SpringApplication.run(Spring01Application.class, args);
+
+        System.out.println("==========================");
+
+
+    }
+
+
+    public static void test2(String[] args) {
         ConfigurableApplicationContext ioc = SpringApplication.run(Spring01Application.class, args);
 
         System.out.println("==========================");
@@ -61,6 +71,5 @@ public class Spring01Application {
         Person person = ioc.getBean("Alex", Person.class);
         System.out.println("person = " + person);
     }
-
 
 }
