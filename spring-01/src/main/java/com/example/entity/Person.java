@@ -1,8 +1,6 @@
 package com.example.entity;
 
-import ch.qos.logback.core.CoreConstants;
 import lombok.Data;
-import org.springframework.context.annotation.Bean;
 
 @Data
 public class Person {
@@ -10,8 +8,7 @@ public class Person {
     private int age;
     private String gender;
 
-    public Person() {
-        System.out.println("Person constructor");
+    public String toString(String name, int age, String gender) {
+        return name + " " + age + " " + gender;
     }
-
 }
